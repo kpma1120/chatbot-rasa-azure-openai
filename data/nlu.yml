@@ -1,0 +1,268 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - I'm leaving
+    - talk to you later
+
+- intent: get_news
+  examples: |
+    # 🌍 World
+    - [world](news_category)
+    - [world](news_category) news
+    - I choose [world](news_category)
+    - [world](news_category), please
+    - I want [world](news_category) headlines
+    - What's happening in [world](news_category) news today?
+    - Give me the latest [world](news_category) headlines.
+    - Any breaking stories in [world](news_category)?
+    - Share updates from the [world](news_category).
+    - What's trending globally in [world](news_category)?
+
+    # 💼 Business
+    - [business](news_category)
+    - [business](news_category) news
+    - I choose [business](news_category)
+    - [business](news_category), please
+    - I want [business](news_category) reports
+    - What's happening in [business](news_category)?
+    - Show me the latest [business](news_category) headlines.
+    - Any big deals in [business](news_category)?
+    - Share updates from the [business](news_category) world.
+    - What's trending in [business](news_category)?
+
+    # 💻 Technology
+    - [technology](news_category)
+    - [technology](news_category) news
+    - I choose [technology](news_category)
+    - [technology](news_category), please
+    - I want [technology](news_category) updates
+    - Show me the latest [technology](news_category) articles.
+    - What's new in the [technology](news_category) industry?
+    - Any trending innovations in [technology](news_category)?
+    - Give me updates about [technology](news_category).
+    - What's happening in [technology](news_category) news?
+
+    # 🔬 Science
+    - [science](news_category)
+    - [science](news_category) news
+    - I choose [science](news_category)
+    - [science](news_category), please
+    - I want [science](news_category) discoveries
+    - What's happening in [science](news_category)?
+    - Show me the latest [science](news_category) headlines.
+    - Any breakthroughs in [science](news_category)?
+    - Share updates from the [science](news_category) world.
+    - What's trending in [science](news_category)?
+
+    # 🩺 Health
+    - [health](news_category)
+    - [health](news_category) news
+    - I choose [health](news_category)
+    - [health](news_category), please
+    - I want [health](news_category) updates
+    - What's new in [health](news_category)?
+    - Show me the latest [health](news_category) reports.
+    - Any breaking [health](news_category) stories?
+    - Share updates about [health](news_category).
+    - What's trending in [health](news_category)?
+
+    # 🏅 Sports
+    - [sports](news_category)
+    - [sports](news_category) news
+    - I choose [sports](news_category)
+    - [sports](news_category), please
+    - I want [sports](news_category) highlights
+    - What's the latest in [sports](news_category)?
+    - Share today's [sports](news_category) highlights.
+    - Any breaking [sports](news_category) stories?
+    - Who's winning in [sports](news_category)?
+    - Give me updates on [sports](news_category).
+
+    # 🎨 Arts
+    - [arts](news_category)
+    - [arts](news_category) news
+    - I choose [arts](news_category)
+    - [arts](news_category), please
+    - I want [arts](news_category) stories
+    - What's happening in [arts](news_category)?
+    - Show me the latest [arts](news_category) articles.
+    - Any breaking [arts](news_category) stories?
+    - Share updates from the [arts](news_category).
+    - What's trending in [arts](news_category)?
+
+    # 👗 Fashion
+    - [fashion](news_category)
+    - [fashion](news_category) news
+    - I choose [fashion](news_category)
+    - [fashion](news_category), please
+    - I want [fashion](news_category) stories
+    - What's new in [fashion](news_category)?
+    - Show me the latest [fashion](news_category) trends.
+    - Any breaking [fashion](news_category) stories?
+    - Share updates about [fashion](news_category).
+    - What's hot in [fashion](news_category) right now?
+
+    # 🍽 Food
+    - [food](news_category)
+    - [food](news_category) news
+    - I choose [food](news_category)
+    - [food](news_category), please
+    - I want [food](news_category) updates
+    - What's cooking in [food](news_category)?
+    - Show me the latest [food](news_category) articles.
+    - Any trending recipes in [food](news_category)?
+    - Share updates about [food](news_category).
+    - What's new in the [food](news_category) industry?
+
+    # ✈️ Travel
+    - [travel](news_category)
+    - [travel](news_category) news
+    - I choose [travel](news_category)
+    - [travel](news_category), please
+    - I want [travel](news_category) updates
+    - What's happening in [travel](news_category)?
+    - Show me the latest [travel](news_category) articles.
+    - Any trending destinations in [travel](news_category)?
+    - Share updates about [travel](news_category).
+    - What's hot in [travel](news_category) right now?
+
+- intent: other_queries
+  examples: |
+    # 🌍 News-like queries
+    - What is the history of the world?
+    - How do world maps evolve over time?
+    - Explain the concept of world peace.
+    - How is blockchain technology transforming global finance?
+    - What role does artificial intelligence technology play in healthcare?
+    - What is the science behind sports injuries
+    - How do sports benefit human health?
+    - Define business ethics
+    - What is business management theory
+    - What is fashion design theory?
+    - How has fashion changed over time?
+    - What role does fashion play in culture
+    - Tell me about world conflicts
+    - Share insights on global trade
+    - Give me updates on technology trends
+    - Provide information about health research.
+    - Show me science discoveries.
+    - Latest sports achievements
+    - Business market overview
+    - Fashion industry updates
+
+    # 📚 Academic queries
+    - How does photosynthesis work?
+    - Explain the theory of evolution.
+    - What is the greenhouse effect
+    - Can you explain Newton's third law?
+    - What is the Pythagorean theorem
+    - What caused World War I?
+    - What is the meaning of utilitarianism?
+    - Explain the concept of supply and demand.
+    - Who wrote "Romeo and Juliet"?
+    - What is an algorithm
+    - Describe quantum mechanics basics
+    - Share knowledge about relativity.
+    - Provide details on DNA structure.
+    - Tell me about ancient civilizations
+    - Explain economic inflation
+    - What is probability theory?
+    - Discuss machine learning principles.
+    - Outline the history of democracy
+    - What is critical thinking?
+    - Explain the role of philosophy
+
+    # 💡 Common sense queries
+    - What is 2 + 2?
+    - Who is the US President?
+    - What is the capital of France
+    - How many days are in a year?
+    - Why is the sky blue?
+    - What is the tallest mountain in the world?
+    - What is the largest ocean
+    - Who invented the telephone?
+    - Why do people sleep?
+    - How do birds fly
+    - Name the biggest desert.
+    - Tell me the longest river
+    - Share the smallest country
+    - Provide the hottest planet.
+    - What is the coldest place on Earth?
+    - identify the fastest animal.
+    - Mention the slowest mammal.
+    - What is the most spoken language?
+    - Give me the largest continent
+    - Share the oldest known tree
+
+    # 🎭 Personal opinion queries
+    - What is your favorite color?
+    - Do you like pizza
+    - Which sport do you enjoy the most?
+    - Do you think fashion is important?
+    - What kind of music do you prefer?
+    - Do you enjoy reading books?
+    - Which food tastes the best to you?
+    - Do you think business is boring
+    - Is the world becoming better in your view?
+    - Do you prefer cats or dogs?
+    - Share your thoughts on movies
+    - Tell me your view on travel.
+    - Do you enjoy technology?
+    - Which science topic excites you
+    - What is your opinion on health?
+    - Do you like arts?
+    - Which fashion trend do you prefer?
+    - Do you enjoy sports
+    - What is your view on culture?
+    - Share your favorite hobby.
+
+    # ❓ Confusing queries
+    - Can a square be round?
+    - If tomorrow never comes, what happens today?
+    - Why is silence so loud?
+    - Can nothing exist?
+    - Is water dry
+    - If everyone is unique, is anyone unique?
+    - Can you see the wind?
+    - Why do we dream of dreaming?
+    - Is time real or just an illusion?
+    - Can a shadow be faster than light?
+    - What if reality is a dream?
+    - Can infinity end?
+    - Is zero something or nothing
+    - Why does existence exist?
+    - Can truth be false?
+    - Is the universe finite?
+    - What if colors disappear.
+    - Can thought exist without mind?
+    - Is imagination more real than reality?
+    - Why do paradoxes exist
+

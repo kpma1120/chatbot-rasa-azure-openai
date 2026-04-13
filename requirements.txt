@@ -1,0 +1,6 @@
+rasa
+spacy
+sqlalchemy<2.0
+dotenv
+openai
+# ipykernel==6.5.*  # not used in production, only for Jupyter notebooks

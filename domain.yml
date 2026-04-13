@@ -1,0 +1,46 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - get_news
+  - other_queries
+
+entities:
+  - news_category
+
+slots:
+  news_category:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: news_category
+
+actions:
+  - action_session_start
+  - action_newline
+  - action_get_news
+  - action_azure_openai_response
+
+responses:
+  utter_welcome:
+    - text: "Welcome! I can fetch the latest New York Times articles for you. Which news topic do you want to know? You can choose from: 🌍 world, 💼 business, 💻 technology, 🔬 science, 🩺 health, ⚽ sports, 🎨 arts, 👗 fashion, 🍽 food, or ✈️ travel."
+
+  utter_greet:
+    - text: "Hello! To get the latest New York Times articles, please choose one of these topics: 🌍 world, 💼 business, 💻 technology, 🔬 science, 🩺 health, ⚽ sports, 🎨 arts, 👗 fashion, 🍽 food, or ✈️ travel."
+
+  utter_goodbye:  
+    - text: "Goodbye! Have a great day." 
+
+  utter_response_unrelated:
+    - text: "It looks like you didn’t clearly specify a news category, which is what I was primarily designed to help with. Still, I’ll do my best to provide you with an answer."
+
+  utter_response_redirect:
+    - text: "I’ve shared my answer with you. To get the latest New York Times articles, please choose one of these topics: 🌍 world, 💼 business, 💻 technology, 🔬 science, 🩺 health, ⚽ sports, 🎨 arts, 👗 fashion, 🍽 food, or ✈️ travel."
+
+  utter_response_continue:
+    - text: "Hope you found those articles helpful! Which news category are you interested in next? You can choose from: 🌍 world, 💼 business, 💻 technology, 🔬 science, 🩺 health, ⚽ sports, 🎨 arts, 👗 fashion, 🍽 food, or ✈️ travel."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
